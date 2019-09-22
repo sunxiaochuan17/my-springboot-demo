@@ -1,0 +1,1 @@
+更多详细说明可见我的博客：[SpringBoot2 整合 Mybatis 多数据源流程](https://jluncc.github.io/2019/09/22/springboot-mybatis-multidatabase/)
