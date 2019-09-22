@@ -1,0 +1,24 @@
+mybatis:
+  configuration:
+    db1:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+      map-underscore-to-camel-case: true
+    db2:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+      map-underscore-to-camel-case: true
+
+spring:
+  datasource:
+    db1:
+      jdbc-url: jdbc:mysql://localhost:3306/test_db1
+      username: your username
+      password: your password
+      driver-class-name: com.mysql.jdbc.Driver
+    db2:
+      jdbc-url: jdbc:mysql://localhost:3306/test_db2
+      username: your username
+      password: your password
+      driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 8090

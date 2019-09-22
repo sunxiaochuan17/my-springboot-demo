@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.db1.StudentMapper">
+    <sql id="column_list">id, name, age, create_time, update_time</sql>
+
+    <select id="listStudent" resultType="com.example.demo.model.Student">
+        select <include refid="column_list"/> from student
+    </select>
+
+    <select id="findStudentById" resultType="com.example.demo.model.Student">
+        select <include refid="column_list"/> from student where id = #{id}
+    </select>
+</mapper>

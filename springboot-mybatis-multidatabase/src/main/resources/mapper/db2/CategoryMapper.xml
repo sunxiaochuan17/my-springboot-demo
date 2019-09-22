@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.db2.CategoryMapper">
+    <sql id="column_list">id, score, category, create_time, update_time</sql>
+
+    <select id="listCategory" resultType="com.example.demo.model.Category">
+        select <include refid="column_list"/> from category
+    </select>
+
+    <select id="findCategoryById" resultType="com.example.demo.model.Category">
+        select <include refid="column_list"/> from category where id = #{id}
+    </select>
+</mapper>
